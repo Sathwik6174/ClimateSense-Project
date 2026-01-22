@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClimateSense | Awareness Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">ClimateSense</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#map">Impact Map</a></li>
+        <li><a href="#stories">Stories</a></li>
+    </ul>
+</nav>
+
+<header id="home" class="hero">
+    <h1>Understanding Climate Change</h1>
+    <p>Our planet is changing.We're trapped in a BIG threat!.But due to our negligence and unconsciousness we're unable
+        to understand the impact it's gonna create and how entire life on this blue planet may get erased :( .It's high
+        time to understand why and how we can act.</p>
+</header>
+
+<section class="content-section">
+    <div style="display: flex;align-items: center"><h3>Causes of Climate Change </h3>
+        <h3 style="color: cadetblue; font-family: 'Agency FB'; font-size: larger">- what causes climate change in
+            reality??</h3>
+    </div>
+    <div class="info-grid">
+        <div class="card">
+            <h2>Fossil Fuels</h2>
+            <p>Burning coal, oil, and gas produces carbon dioxide and nitrous oxide.</p>
+        </div>
+        <div class="card">
+            <h2>Deforestation</h2>
+            <p>Cutting down forests means trees can no longer absorb CO2 from the atmosphere.</p>
+        </div>
+        <div class="card">
+            <h2>Agriculture</h2>
+            <p>Livestock like cows and sheep produce large amounts of methane when they digest food.</p>
+        </div>
+    </div>
+</section>
+
+<section id="quiz" class="quiz-section">
+    <h2>Test Your Knowledge</h2>
+    <div id="quiz-container">
+        <p id="question">Loading question...</p>
+        <div id="options"></div>
+        <button id="next-btn" onclick="nextQuestion()">Next Question</button>
+    </div>
+    <div id="result-container" style="display:none;">
+        <h3>Your Score: <span id="score"></span></h3>
+        <button onclick="restartQuiz()">Restart</button>
+    </div>
+</section>
+
+<section id="map" class="content-section">
+    <h2>Local Impact Map</h2>
+    <p>Check the climate impact in your region using this interactive tool.</p>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15228.45330324!2d78.4744!3d17.3850!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaeb2e75%3A0x23707010467b7f58!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<section id="spotlight" class="content-section">
+    <div class="spotlight-header">
+        <h2>Climate Hero: Prof. Chetan Singh Solanki</h2>
+        <p>Known as the <strong>"Solar Gandhi of India,"</strong> Prof. Chetan Singh Solanki, an IIT Bombay professor
+            and founder of the Energy Swaraj Foundation known for his pioneering work in solar energy and his 11-year
+            "Energy Swaraj Yatra" (Journey for Energy Independence), traveling across India in a solar-powered bus to
+            promote 100% solar adoption and raise climate change awareness, much like Gandhi's non-violent movements. He
+            is also called the "Solar Man of India" for his efforts to create a public movement for sustainable energy.
+            Key Aspects of His Work:
+            Energy Swaraj Movement: Aims to achieve energy independence and sustainability by promoting the use of solar
+            energy.
+            Energy Swaraj Yatra (2020-2030): An ambitious 11-year journey on a solar bus to educate people and practice
+            what he preaches, not returning home until the mission is complete.
+            Climate Change Action: Focuses on practical solutions, urging individuals to reduce consumption and
+            transition to solar power.
+            Initiatives: Includes training rural communities, creating solar devices, and campaigns like "This election,
+            think of a climate correction".
+            Why "Solar Gandhi"?
+            He draws inspiration from Mahatma Gandhi's ideals of self-reliance and sustainable living, applying them to
+            the energy sector through education and grassroots movements, hence the nickname.
+        </p>
+    </div>
+
+    <div class="linkedin-posts-container">
+        <div class="post-box">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7419587622022512641?collapsed=1"
+                    height="591" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+        </div>
+
+        <div class="post-box">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7418983151319908353?collapsed=1"
+                    height="669" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+        </div>
+
+        <div class="post-box">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7418130392785866752?collapsed=1"
+                    height="669" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+        </div>
+
+        <div class="post-box">
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7417896910247743488?collapsed=1"
+                    height="669" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+        </div>
+    </div>
+
+    <div class="action-call">
+        <a href="https://www.linkedin.com/in/drchetansolanki/" target="_blank" class="link-btn">Follow his Journey on
+            LinkedIn</a>
+    </div>
+</section>
+
+<section id="stories" class="content-section">
+    <h2>Share Your Story</h2>
+    <form id="story-form" onsubmit="submitStory(event)">
+        <input type="text" id="user-name" placeholder="Your Name" required>
+        <textarea id="user-story" placeholder="Share your climate action story..." required></textarea>
+        <button type="submit" id="submit-btn">Post Story</button>
+    </form>
+
+    <div id="story-display">
+        <div class="story-card">
+            <h4>Sai Sathwik</h4>
+            <p>"I like to start using adequate water resources and as low energy resources like electricity as possible
+                to reduce my carbon footprint, anyway I go to LHC by a bicycle :)) GO GREEN"</p>
+        </div>
+    </div>
+</section><section id="action-plan" class="content-section" style="background: #1a331a; color: white;">
+    <h2 style="color: #f39c12;">The Energy Swaraj Roadmap</h2>
+    <p>Follow the <strong>AMG Principle</strong> by Prof. Chetan Singh Solanki to save the planet.</p>
+
+    <div class="roadmap">
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h3>AVOID</h3>
+                <p>Avoid the use of energy wherever possible. Switch off lights when leaving a room. Use natural light during the day.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3>MINIMIZE</h3>
+                <p>If you cannot avoid, minimize. Use energy-efficient appliances (LEDs, 5-star rated ACs) and reduce your consumption by 1/3rd.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3>GENERATE</h3>
+                <p>Only after avoiding and minimizing, generate your own energy locally using Solar Power. Become a 'Prosumer' (Producer + Consumer).</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="final-quote">
+        <p>"Climate Change will not wait for us to be ready. We must act now."</p>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 20px; background: #111; color: #777;">
+    <p>&copy; ClimateSense | An NSS Socially Relevant Project | GO GREEN </p>
+</footer>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
